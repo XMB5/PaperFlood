@@ -4,9 +4,6 @@ JavaScript that can flood local printers with or without the user's knowledge. h
 ## Conecpt
 Overall, PaperFlood uses [cross-site printing](https://hacking-printers.net/wiki/index.php/Cross-site_printing).  
 
-### Raw Printing
-First, you must understand how [raw printing](https://hacking-printers.net/wiki/index.php/Port_9100_printing) works. If a printer receives a TCP connection to port 9100, the printer will follow the commands send to it in a native format. If no valid commands are sent, the printer seems prints all the bytes it receives. 
-
 ## Procedure
 1. use [WebRTC to get your local IP address](https://github.com/diafygi/webrtc-ips)
 2. use your local IP address to guess other local IP addresses on the same network
