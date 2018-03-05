@@ -1,5 +1,5 @@
 # PaperFlood
-JavaScript that can flood local printers with or without the user's knowledge. [View Demo](https://xmb5.github.io/PaperFlood/)
+JavaScript that can flood local printers with or without the user's knowledge. [Demo](https://xmb5.github.io/PaperFlood/)
 
 ## Conecpt
 Overall, PaperFlood uses [cross-site printing](https://hacking-printers.net/wiki/index.php/Cross-site_printing).  
