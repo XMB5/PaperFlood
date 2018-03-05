@@ -176,6 +176,7 @@ execute = function() {
     
     getIPs(function(localIp) {
         doScan(localIp, timeout, function(ip) {
+            foundIp = true;
             detectPrinter(ip, timeout, function() {
                 out.innerText += '\nprinter: ' + ip;
                 spamPrinter(ip);
@@ -183,8 +184,8 @@ execute = function() {
         });
     });
     setTimeout(function() {
-    		if (!foundIp) {
-        		out.innerText += '\nerror: unable to get local ip address in ' + findIpTimeout + ' ms';
+    	if (!foundIp) {
+            out.innerText += '\nerror: unable to get local ip address in ' + findIpTimeout + ' ms';
         }
     }, findIpTimeout);
 
