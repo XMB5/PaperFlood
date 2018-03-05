@@ -168,7 +168,7 @@ execute = function() {
     }
 
     var out = document.getElementById('log');
-    var timeout = 750;
+    var timeout = 1500;
     var detectPrinterTimeout = timeout * 2;
     var foundIp = false;
     var findIpTimeout = 200;
