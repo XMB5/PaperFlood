@@ -8,9 +8,9 @@ toggleTesting = function() {
     testing = !testing;
     var button = document.getElementById('testButton');
     if (testing) {
-        button.setValue('turn off testing mode');
+        button.value = 'turn off testing mode';
     } else {
-        button.setValue('turn on testing mode');
+        button.value = 'turn on testing mode';
     }
 }
 
