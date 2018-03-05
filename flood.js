@@ -33,7 +33,7 @@ execute = function() {
                         aborted = true;
                     }
                     xhr.onloadend = function() {
-                        if (time > 1 && time < (timeout - 1) && aborted === false) {
+                        if (time > 1 && time < timeout && aborted === false) {
                             onDiscover(host);
                         }
                     }
