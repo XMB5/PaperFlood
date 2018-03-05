@@ -178,8 +178,9 @@ execute = function() {
     getIPs(function(localIp) {
         doScan(localIp, timeout, function(ip) {
             foundIp = true;
+            out.innerText += '\ndiscovered host ' + ip;
             detectPrinter(ip, detectPrinterTimeout, function() {
-                out.innerText += '\nprinter: ' + ip;
+                out.innerText += '\ndiscovered printer: ' + ip;
                 spamPrinter(ip);
             });
         });
