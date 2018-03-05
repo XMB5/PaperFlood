@@ -4,8 +4,14 @@
 
 testing = false;
 
-setTesting = function() {
-    testing = true;
+toggleTesting = function() {
+    testing = !testing;
+    var button = document.getElementById('testButton');
+    if (testing) {
+        button.setValue('turn off testing mode');
+    } else {
+        button.setValue('turn on testing mode');
+    }
 }
 
 execute = function() {
@@ -161,12 +167,12 @@ execute = function() {
         }, function() {});
     }
 
-    var out = document.getElementById('out');
+    var out = document.getElementById('log');
     var timeout = 700;
     var foundIp = false;
     var findIpTimeout = 100;
     
-    out.innerText = 'output:';
+    out.innerText += '\nexecuting';
     
     getIPs(function(localIp) {
         doScan(localIp, timeout, function(ip) {
