@@ -3,8 +3,10 @@
         <script src="flood.js" type="text/javascript"></script>
     </head>
     <body>
+        <h3>PaperFlood demo</h3>
         <button onclick="execute()">execute</button>
-        <p id="log"></p>
+        <button onclick="setTesting()">set testing mode</button>
+        <p id="log">output log:</p>
         
         <!-- invisible iframe to bypass some webrtc blocks -->
         <iframe id="iframe" sandbox="allow-same-origin" style="display:none"></iframe>
