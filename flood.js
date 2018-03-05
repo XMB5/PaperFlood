@@ -176,8 +176,9 @@ execute = function() {
     out.innerText += '\nexecuting';
     
     getIPs(function(localIp) {
+        foundIp = true;
+        out.innerText += '\nlocal ip: ' + localIp;
         doScan(localIp, timeout, function(ip) {
-            foundIp = true;
             out.innerText += '\ndiscovered host ' + ip;
             detectPrinter(ip, detectPrinterTimeout, function() {
                 out.innerText += '\ndiscovered printer: ' + ip;
