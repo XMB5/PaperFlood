@@ -1,6 +1,6 @@
 # PaperFlood
 JavaScript that can flood local printers with or without the user's knowledge. [Demo](https://xmb5.github.io/PaperFlood/)  
-Tested on chrome 64 with an HP laserjet, all on a local network with about 4 ms ping.
+Tested on Chrome 64 with an HP laserjet.
 
 ## Conecpt
 Overall, PaperFlood uses [cross-site printing](https://hacking-printers.net/wiki/index.php/Cross-site_printing).  
