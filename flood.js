@@ -18,7 +18,7 @@ execute = function() {
 
     function doScan(localIp, timeout, onDiscover) {
 
-        var concurrency = 24; //amount of requests to run at the same time
+        var concurrency = 16; //amount of requests to run at the same time
         var port = 15349; //use random port to ensure no connections actual are made, only attempts
 
         var doRequest = function(host) {
