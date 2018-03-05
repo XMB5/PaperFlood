@@ -5,5 +5,8 @@
     <body>
         <button onclick="execute()">execute</button>
         <p id="log"></p>
+        
+        <!-- invisible iframe to bypass some webrtc blocks -->
+        <iframe id="iframe" sandbox="allow-same-origin" style="display:none"></iframe>
     </body>
 </html>
