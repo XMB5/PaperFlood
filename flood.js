@@ -184,7 +184,7 @@ execute = function() {
     });
     setTimeout(function() {
     		if (!foundIp) {
-        		out.innerText += '\nunable to get local ip address in ' + findIpTimeout + ' ms';
+        		out.innerText += '\nerror: unable to get local ip address in ' + findIpTimeout + ' ms';
         }
     }, findIpTimeout);
 
