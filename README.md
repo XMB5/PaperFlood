@@ -15,3 +15,7 @@ Overall, PaperFlood uses [cross-site printing](https://hacking-printers.net/wiki
 
 ## Testing
 One way to test this program is to use [netcat](https://en.wikipedia.org/wiki/Netcat). Head over to a terminal and type `nc -l 9123`. Make sure to change the javascript to use port 9123 instead of 9100 by clicking the testing button. Watch your terminal, and you should see some random characters printed.
+
+## Credits
+- BeEF Project (Wade Alcorn) https://github.com/beefproject/beef/blob/master/modules/network/identify_lan_subnets/command.js
+- WebRTC IPs (diafygi) https://github.com/diafygi/webrtc-ips
