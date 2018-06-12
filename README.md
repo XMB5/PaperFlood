@@ -1,6 +1,3 @@
-# TODO:
-There is a much more effecitve method that I found out about that can print images and is much faster. I will try to implement this within the next 2 months.
-
 # PaperFlood
 JavaScript that can flood local printers with or without the user's knowledge. [Demo](https://xmb5.github.io/PaperFlood/)
 
